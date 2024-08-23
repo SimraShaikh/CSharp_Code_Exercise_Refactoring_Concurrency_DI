@@ -18,7 +18,7 @@ namespace DeveloperSample.Syncing
             var bag = new ConcurrentBag<string>();
             Parallel.ForEach(items, i =>
             {
-                var r = i; // Avoid async/await in Parallel.ForEach as it is not thread-safe
+                var r = i; // Avoiding async/await in Parallel.ForEach as it is not thread-safe
                 bag.Add(r);
             });
             return bag.ToList();
