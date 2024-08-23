@@ -17,8 +17,8 @@ namespace DeveloperSample.ClassRefactoring
         {
             var swallowFactory = new SwallowFactory();
             var swallow = swallowFactory.GetSwallow(SwallowType.African);
-            swallow.ApplyLoad(SwallowLoad.Coconut);
-            Assert.Equal(18, swallow.GetAirspeedVelocity());
+            swallow.AddLoad(SwallowLoad.Coconut);
+            Assert.Equal(14, swallow.GetAirspeedVelocity());
         }
 
         [Fact]
@@ -34,8 +34,8 @@ namespace DeveloperSample.ClassRefactoring
         {
             var swallowFactory = new SwallowFactory();
             var swallow = swallowFactory.GetSwallow(SwallowType.European);
-            swallow.ApplyLoad(SwallowLoad.Coconut);
-            Assert.Equal(16, swallow.GetAirspeedVelocity());
+            swallow.AddLoad(SwallowLoad.Coconut);
+            Assert.Equal(10, swallow.GetAirspeedVelocity());
         }
     }
 }
